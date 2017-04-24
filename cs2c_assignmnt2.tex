@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
+
+\title{CS2C Assignment 2}
+\author{Angus Yip}
+\date{April 24th, 2017}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section*{2.1}
+
+    The ascending order for the functions are: 
+    
+    \[ \frac{2}{N}, 37, \sqrt{N}, N, N\log{\log{N}}, N\log{N}, N\log{N^2}, \]
+    \[ N(\log{N})^2, N^{1.5}, N^2, N^2\log{N}, N^3, 2^\frac{N}{2}, 2^N \]
+    
+    \noindent Furthermore, the functions \( N\log{N} \) and \( N\log{N^2} \) 
+    grows at the same rate.
+
+\section*{2.2}
+    \renewcommand{\labelenumi}{\alph{enumi}}
+    \begin{enumerate}
+        \item true.
+        \item false.
+        \item false.
+        \item false.
+    \end{enumerate}
+
+\section*{2.6}
+    %\renewcommand{\labelenumi}{\alph{enumi}}
+    \begin{enumerate}
+        \item \( 2^{2^{N - 1}} \)
+        \item 
+            \begin{equation*} 
+            \begin{split}
+                2^{2^{N - 1}} & = D \\
+                2^{N - 1}\log{2} & = \log{D}\\
+                2^{N - 1} & = \frac{\log{D}}{\log{2}}\\
+                (N - 1)\log{2} & = \log{\log{D}} - \log{\log{2}}\\
+                N & = \frac{\log{\log{D}}}{\log{2}} - \frac{\log{\log{2}}}{\log{2}} + 1\\
+                N & = O(\log{\log{D}})
+            \end{split}
+            \end{equation*}
+    
+    
+    \end{enumerate}
+
+\section*{2.7}
+    \begin{enumerate}
+        \renewcommand{\labelenumi}{\arabic{enumi}}
+        \item 
+            \begin{enumerate}
+                \item
+                \item 
+                \item
+            \end{enumerate}
+        \item
+            \begin{enumerate}
+                \item 
+                \item 
+                \item
+            \end{enumerate}
+        \item 
+            \begin{enumerate}
+                \item
+                \item 
+                \item
+            \end{enumerate}
+        \item
+            \begin{enumerate}
+                \item 
+                \item 
+                \item
+            \end{enumerate}
+        \item 
+            \begin{enumerate}
+                \item
+                \item 
+                \item
+            \end{enumerate}
+        \item
+            \begin{enumerate}
+                \item 
+                \item 
+                \item
+            \end{enumerate}
+    
+    \end{enumerate}
+    
+
+\section*{2.11}
+    %\renewcommand{\labelenumi}{\alph{enumi}}
+    \begin{enumerate}
+        \item
+            \begin{equation*} 
+            \begin{split}
+                \frac{500}{100} & = \frac{N}{.5}\\
+                N & = 2.50 ms
+            \end{split}
+            \end{equation*}
+        \item 
+            \begin{equation*}
+            \begin{split}
+                \frac{500\log{500}}{100\log{100}} & = \frac{N}{.5}\\
+                N & = 3.37 ms
+            \end{split}
+            \end{equation*}
+        \item
+            \begin{equation*} 
+            \begin{split}
+                \frac{500^2}{100^2} & = \frac{N}{.5}\\
+                N & = 12.5 ms
+            \end{split}
+            \end{equation*}
+        \item
+            \begin{equation*} 
+            \begin{split}
+                \frac{500^3}{100^3} & = \frac{N}{.5}\\
+                N & = 62.5 ms
+            \end{split}
+            \end{equation*}
+    \end{enumerate}
+
+\section*{2.13}
+    %\renewcommand{\labelenumi}{\alph{enumi}}
+    \begin{enumerate}
+        \item
+            \( \sum_{i=0}^{N} a_{i}x^i \) takes \(i\) operations to compute.
+            \begin{equation*} 
+            \begin{split}
+                & \sum_{i=0}^{N} i + N\\
+                = &\, \frac{N(N + 1)}{2} + N\\
+                = &\, O(N^2)
+            \end{split}
+            \end{equation*}
+        \item 
+            From section 2.4.4, the new algorithm takes \( \log_2{i} \) operations
+            \begin{equation*}
+            \begin{split}
+                & \sum_{i=0}{N} {\log_2{i}} + N\\
+                = &\, \log_2{N!} + N\\
+                = &\, O(\log{N!})
+            \end{split}
+            \end{equation*}
+    \end{enumerate}
+    
+\section*{2.15}
+    An efficient algorithm in the case would be a binary search, in which the runtime would be at the \( O(\log{N}) \) level.
+    
+\section*{2.16}
+    Code attached as assignment2.cpp.
+
+\end{document}
