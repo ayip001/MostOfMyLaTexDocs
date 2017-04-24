@@ -1,0 +1,2 @@
+# MostOfMyLaTexDocs
+just a workspace
